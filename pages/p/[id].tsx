@@ -13,7 +13,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     where: { id: String(params?.id) },
     include: {
       author: {
-        select: { email: true },
+        select: { email: true, name: true },
       },
     },
   });
